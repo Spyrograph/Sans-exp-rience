@@ -1,0 +1,182 @@
+body {
+  background-color: lightgrey;
+}
+
+#text {
+  position: absolute;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 600;
+  top: 220px;
+  right: 1100px;
+  width: 200px;
+  height: 150px;
+  z-index: 3;
+
+}
+
+#bubble {
+    position: absolute;
+    background: url(../img/bubble.png) no-repeat;
+    background-size: cover;
+    top: 160px;
+    right: 1080px;
+    width: 250px;
+    height: 200px;
+    z-index: 1;
+}
+
+#hero {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 870px;
+    top: 380px;
+    flex-wrap: wrap;
+    width : auto;
+    height: auto;
+    z-index: 0;
+
+}
+
+#head-body, .bodyPart1, .bodyPart2,.bodyPart3 {
+    display: flex;
+    flex-wrap: wrap;
+    width : 230px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.bodyPart3 {
+  position: absolute;
+  top: 87px;
+}
+
+/* Permet de bouger le buste du personnage */
+
+.up{
+  transform: translateX(3px) translateY(-3px);
+}
+.down{
+  transform: translateX(6px) translateY(0px);
+}
+
+
+
+/* Permet de bouger la tête  du personnage */
+
+.bodyPart1 {
+  position: absolute;
+  top: -142px;
+}
+
+.headUp{
+  transform: translateY(5px);
+}
+
+/* animation flamme bleu */
+
+.fire {
+  display: block;
+  height: 70px;
+  width: 70px;
+  background: url(../img/sprite10.png) no-repeat;
+  animation: fire 20s steps(12) infinite;
+  display: none;
+
+}
+
+@keyframes fire {
+  from { background-position-x: 0; }
+  to { background-position-x: -1184px; }
+}
+
+/* Coloris pixel */
+
+.square {
+  width: 10px;
+  height: 10px;
+}
+
+.square-black {
+  background-color: black;
+}
+
+.square-blue {
+  background-color: blue;
+}
+
+.square-grey {
+  background-color: grey;
+}
+
+.square-white {
+  background-color: white;
+}
+
+.square-lightgrey {
+  background-color: lightgrey;
+}
+
+.square-teal {
+  background-color: #a2f9f4;
+}
+
+/* /////////////////////////////////////////////// GAME ////////////////////////////////////////////  */
+
+.annonce {
+  color: black;
+}
+.none {
+  display: none;
+
+}
+#game {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  height: 300px;
+  bottom: 140px;
+  left: 640px;
+
+  }
+
+#tray {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  border: solid 4px white;
+  margin-bottom: 10px;
+
+
+}
+
+#menu {
+  display: flex;
+
+}
+
+#name, #lvl, #hp, #bar, #life {
+  margin-right: 15px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+
+}
+
+#bar {
+  background-color: yellow;
+
+  width: 100px;
+  height: 20px;
+}
+
+#vilain {
+  color: red;
+  position: absolute;
+  font-size: 30px;
+  left: 48%;
+  top: 30%;
+
+}
